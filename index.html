@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BeyoncéOS</title>
+     <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-image: url('https://i.pinimg.com/736x/44/d4/bd/44d4bd34749da9937492b31e27374e7f.jpg'); background-size: cover; height: 100vh">
+    
+<div id="top">
+
+  <header class="header">
+      <h1 class="title">BeyoncéOS</h1>
+      
+   
+    
+  <body style="background-image: url('https://i.pinimg.com/1200x/a2/fc/c6/a2fcc6c1642db0604649360a8e936b39.jpg'); background-size: cover; height: 100vh">
+    <p id="timeElement">Time</p>
+
+   <script>
+      setInterval(() => {
+        const timeNode = document.querySelector("#timeElement");
+        if (timeNode) {
+          timeNode.innerHTML = new Date().toLocaleString();
+        }
+      }, 1000);
+    </script>
+    </header>
+
+</div>
+  
+  
+    <div id="welcome" class="welcome">
+      <p style="cursor: pointer" id="welcomeclose">Close</p>
+      <p id="welcomeheader"> 
+		    🐝
+	    </p>
+     <h2>Welcome to the OS of Beyoncé</h2>
+     <p>This is a Yoncé-themed webOS.</p> 
+     <img class="pic1" src="https://i.pinimg.com/736x/f5/e6/79/f5e6799273944d6803ba62662e7bc20d.jpg"> 
+    </div>
+
+ <script src="script.js"></script>
+
+  </body>
+</html>
