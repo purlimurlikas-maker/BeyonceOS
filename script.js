@@ -53,13 +53,6 @@ function dragElement(element) {
   }
 }
 
-if (document.getElementById(elmnt.id + "header")) {
-	// if present, the header is where you move the DIV from:
-	document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-} else {
-	// otherwise, move the DIV from anywhere inside the DIV:
-	elmnt.onmousedown = dragMouseDown;
-}
 
 var welcomeScreen = document.querySelector("#welcome")
 
@@ -68,5 +61,17 @@ function closeWindow(element) {
 }
 
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "block"
 }
+
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
