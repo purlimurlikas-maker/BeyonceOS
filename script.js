@@ -1,5 +1,6 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("about"));
 dragElement(document.querySelector("#albumswindow"))
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -75,6 +76,29 @@ welcomeScreenClose.addEventListener("click", function() {
 
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
+});
+
+
+var aboutScreen = document.querySelector("#about")
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
+
+function openWindow(element) {
+  element.style.display = "block"
+}
+
+var aboutScreenClose = document.querySelector("#aboutclose")
+
+var aboutScreenOpen = document.querySelector("#aboutopen")
+
+aboutScreenClose.addEventListener("click", function() {
+  closeWindow(aboutScreen);
+});
+
+aboutScreenOpen.addEventListener("click", function() {
+  openWindow(aboutScreen);
 });
 
 var selectedIcon = undefined
