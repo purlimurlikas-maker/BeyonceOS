@@ -93,13 +93,12 @@ border-bottom: 0.5px solid #fea5be;
 .albumswindow {
   position: absolute;
   top: 200px;
-  right: 14px;
   z-index: 4;
   cursor: pointer;
   background-color: #ffecee;
   border: 3px solid #fea5be;
   border-radius: 10px;
-  width:600px;
+  width:1000px;
   height: auto;
   padding: 10px;
   font-weight: 700;
@@ -120,6 +119,13 @@ border-bottom: 0.5px solid #fea5be;
   }
 
   .albumcover {
-width:200px;
-border-radius: 12px;
+display: block;
+  width: 100%;
+  border-radius: 12px;
    }
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
