@@ -41,12 +41,12 @@ border-bottom: 0.5px solid #fea5be;
  position: absolute;
  display:flex;
  flex-direction: column;
- left: 50%;
+ left: 43%;
  padding: 0;
 }
  
 
-#welcomeheader {
+#welcomeheader, #albumswindowheader {
     font-size: 2rem;
     margin-top: 0;
 }
@@ -79,3 +79,47 @@ border-bottom: 0.5px solid #fea5be;
   font-weight: 700;
   color: #002f4f;
   }
+
+  .albumicon-img {
+  cursor: pointer;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  font-weight: 700;
+    }
+
+.albumswindow {
+  position: absolute;
+  top: 200px;
+  right: 14px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ffecee;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width:600px;
+  height: auto;
+  padding: 10px;
+  font-weight: 700;
+  color: #002f4f;
+  display: none;
+  }
+
+  #albumswindowClose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ce491c;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  }
+
+  .albumcover {
+width:200px;
+border-radius: 12px;
+   }
