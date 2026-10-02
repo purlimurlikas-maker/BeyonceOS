@@ -17,9 +17,20 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffe0e6;
     position: absolute; top: 50%; left: 50%; 
     transform: translate(-50%, -50%);
+    padding-bottom: 20px;
 }
 
 .pic1 { 
+    width: 300px;
+    border: 3px solid #fea5be;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 44px;
+}
+
+.pic3 { 
     width: 300px;
     border: 3px solid #fea5be;
     border-radius: 7px;
@@ -34,7 +45,7 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 120px;              
+height: 140px;              
 z-index: 100;
 backdrop-filter: blur(10px);
 background-color: rgba(0, 0, 0, 0.25);
@@ -52,7 +63,7 @@ border-bottom: 0.5px solid #fea5be;
 }
  
 
-#welcomeheader, #albumswindowheader, #aboutheader {
+#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader {
     font-size: 2rem;
     margin-top: 0;
 }
@@ -94,6 +105,9 @@ border-bottom: 0.5px solid #fea5be;
   height: 64px;
   text-align: center;
   font-weight: 700;
+  position: absolute;
+  top: 10px;
+  left: 10px;
     }
 
 .albumswindow {
@@ -145,6 +159,7 @@ display: block;
     position: absolute; top: 50%; left: 50%; 
     transform: translate(-50%, -50%);
     display: none;
+    padding-bottom: 20px;
 }
 
 #aboutclose {
@@ -186,3 +201,51 @@ display: block;
     justify-content: center;
     border: 3px solid #fea5be;
 }
+
+.app-name {
+  position: absolute;
+  top: 70px;
+  left: 17px;
+  font-size: 1rem;
+}
+
+.accomplishments { 
+    width: 400px;
+    border-radius: 7px;
+    border: 3px solid #fea5be;
+    padding: 10px;
+    background-color: #ffe0e6;
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    padding-bottom: 20px;
+    display:none;
+}
+
+#accomplishmentsclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ce491c;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  }
+
+  #accomplishmentsopen {
+  position: absolute;
+  top: 0px;
+  right: 170px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ffecee;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width:7.5rem;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  color: #002f4f;
+  }
