@@ -4,6 +4,7 @@ dragElement(document.getElementById("about"));
 dragElement(document.getElementById("accomplishments"));
 dragElement(document.querySelector("#albumswindow"))
 dragElement(document.querySelector("#importance"))
+dragElement(document.querySelector("#childhood"))
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -157,6 +158,29 @@ importanceScreenClose.addEventListener("click", function() {
 
 importanceScreenOpen.addEventListener("click", function() {
   openWindow(importanceScreen);
+});
+
+
+var childhoodScreen = document.querySelector("#childhood")
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
+
+function openWindow(element) {
+  element.style.display = "block"
+}
+
+var childhoodScreenClose = document.querySelector("#childhoodclose")
+
+var childhoodScreenOpen = document.querySelector("#childhoodopen")
+
+childhoodScreenClose.addEventListener("click", function() {
+  closeWindow(childhoodScreen);
+});
+
+childhoodScreenOpen.addEventListener("click", function() {
+  openWindow(childhoodScreen);
 });
 
 var selectedIcon = undefined

@@ -63,7 +63,7 @@ border-bottom: 0.5px solid #fea5be;
 }
  
 
-#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader {
+#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader, #childhoodheader {
     font-size: 2rem;
     margin-top: 0;
 }
@@ -80,19 +80,20 @@ border-bottom: 0.5px solid #fea5be;
   height: 20px;
   }
 
-#welcomeopen {
+.open {
   z-index: 4;
   cursor: pointer;
   background-color: #ffecee;
   border: 3px solid #fea5be;
   border-radius: 10px;
   width:7.5rem;
-  height: 1.2rem;
+  height: auto;
   padding: 10px;
   text-align: center;
   font-weight: 700;
   color: #002f4f;
   margin: 3px;
+
   }
 
   .albumicon-img {
@@ -111,7 +112,7 @@ border-bottom: 0.5px solid #fea5be;
 .albumswindow {
   position: absolute;
   top: 200px;
-  z-index: 4;
+  z-index: 6;
   cursor: pointer;
   background-color: #ffe0e6;
   border: 3px solid #fea5be;
@@ -158,6 +159,7 @@ display: block;
     transform: translate(-50%, -50%);
     display: none;
     padding-bottom: 20px;
+    z-index: 4;
 }
 
 #aboutclose {
@@ -172,20 +174,7 @@ display: block;
   height: 20px;
   }
 
-#aboutopen {
-  z-index: 4;
-  cursor: pointer;
-  background-color: #ffecee;
-  border: 3px solid #fea5be;
-  border-radius: 10px;
-  width:7.5rem;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-  color: #002f4f;
-  margin: 3px;
-  }
+
 
 .pic2 { 
   position:relative;
@@ -215,6 +204,7 @@ display: block;
     transform: translate(-50%, -50%);
     padding-bottom: 20px;
     display:none;
+    z-index: 4;
 }
 
 #accomplishmentsclose {
@@ -229,20 +219,7 @@ display: block;
   height: 20px;
   }
 
-  #accomplishmentsopen {
-  z-index: 4;
-  cursor: pointer;
-  background-color: #ffecee;
-  border: 3px solid #fea5be;
-  border-radius: 10px;
-  width:7.5rem;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-  color: #002f4f;
-  margin:3px;
-  }
+  
 
   .pic4 { 
   position:relative;
@@ -255,7 +232,7 @@ display: block;
     border: 3px solid #fea5be;
 }
 
-.Importance { 
+.importance { 
     width: 400px;
     border-radius: 7px;
     border: 3px solid #fea5be;
@@ -265,6 +242,7 @@ display: block;
     transform: translate(-50%, -50%);
     padding-bottom: 20px;
     display:none;
+    z-index: 4;
 }
 
 #importanceclose {
@@ -286,23 +264,46 @@ display: block;
   background-color: rgba(0, 0, 0, 0.25);
   width: 150px;
   position:fixed;
-  top: 250px;
-  right: 30px;
+  top: 170px;
+  right: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 5;
   }
 
-  #importanceopen {
+
+  #childhood { 
+    width: 400px;
+    border-radius: 7px;
+    border: 3px solid #fea5be;
+    padding: 10px;
+    background-color: #ffe0e6;
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    padding-bottom: 20px;
+    
+    z-index: 4;
+}
+
+  .pic5 { 
+    position:relative;
+    left: 44px;
+    width: 300px;
+    border: 1px #ffecee;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #fea5be;
+}
+
+#childhoodclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
   z-index: 4;
   cursor: pointer;
-  background-color: #ffecee;
-  border: 3px solid #fea5be;
+  background-color: #ce491c;
   border-radius: 10px;
-  width:7.5rem;
-  height: auto;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-  color: #002f4f;
-  margin:3px;
+  width: 20px;
+  height: 20px;
   }
