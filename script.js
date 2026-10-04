@@ -5,6 +5,7 @@ dragElement(document.getElementById("accomplishments"));
 dragElement(document.querySelector("#albumswindow"))
 dragElement(document.querySelector("#importance"))
 dragElement(document.querySelector("#childhood"))
+dragElement(document.querySelector("#speech"))
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -181,6 +182,28 @@ childhoodScreenClose.addEventListener("click", function() {
 
 childhoodScreenOpen.addEventListener("click", function() {
   openWindow(childhoodScreen);
+});
+
+var speechScreen = document.querySelector("#speech")
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
+
+function openWindow(element) {
+  element.style.display = "block"
+}
+
+var speechScreenClose = document.querySelector("#speechclose")
+
+var speechScreenOpen = document.querySelector("#speechopen")
+
+speechScreenClose.addEventListener("click", function() {
+  closeWindow(speechScreen);
+});
+
+speechScreenOpen.addEventListener("click", function() {
+  openWindow(speechScreen);
 });
 
 var selectedIcon = undefined
