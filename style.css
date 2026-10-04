@@ -63,7 +63,7 @@ border-bottom: 0.5px solid #fea5be;
 }
  
 
-#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader {
+#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader {
     font-size: 2rem;
     margin-top: 0;
 }
@@ -81,9 +81,6 @@ border-bottom: 0.5px solid #fea5be;
   }
 
 #welcomeopen {
-  position: absolute;
-  top: 0px;
-  right: 14px;
   z-index: 4;
   cursor: pointer;
   background-color: #ffecee;
@@ -95,6 +92,7 @@ border-bottom: 0.5px solid #fea5be;
   text-align: center;
   font-weight: 700;
   color: #002f4f;
+  margin: 3px;
   }
 
   .albumicon-img {
@@ -175,9 +173,6 @@ display: block;
   }
 
 #aboutopen {
-  position: absolute;
-  top: 50px;
-  right: 14px;
   z-index: 4;
   cursor: pointer;
   background-color: #ffecee;
@@ -189,6 +184,7 @@ display: block;
   text-align: center;
   font-weight: 700;
   color: #002f4f;
+  margin: 3px;
   }
 
 .pic2 { 
@@ -234,9 +230,6 @@ display: block;
   }
 
   #accomplishmentsopen {
-  position: absolute;
-  top: 0px;
-  right: 170px;
   z-index: 4;
   cursor: pointer;
   background-color: #ffecee;
@@ -248,4 +241,68 @@ display: block;
   text-align: center;
   font-weight: 700;
   color: #002f4f;
+  margin:3px;
+  }
+
+  .pic4 { 
+  position:relative;
+  left: 44px;
+    width: 300px;
+    border: 1px #ffecee;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #fea5be;
+}
+
+.Importance { 
+    width: 400px;
+    border-radius: 7px;
+    border: 3px solid #fea5be;
+    padding: 10px;
+    background-color: #ffe0e6;
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    padding-bottom: 20px;
+    display:none;
+}
+
+#importanceclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ce491c;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  }
+
+.sidebar {
+  border-radius: 12px;
+  border: 3px solid #fea5be;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 150px;
+  position:fixed;
+  top: 250px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  }
+
+  #importanceopen {
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ffecee;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width:7.5rem;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  color: #002f4f;
+  margin:3px;
   }
