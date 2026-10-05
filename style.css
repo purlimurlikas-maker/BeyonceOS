@@ -65,10 +65,9 @@ text-align: center;
 
 
 .head {
- position: absolute;
  display:flex;
  flex-direction: column;
- left: 43%;
+ left: 600px;
  padding: 0;
 }
  
