@@ -75,6 +75,7 @@ text-align: center;
 #welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader, #childhoodheader, #speechheader, #backgroundsAppwindowheader, #quotesheader {
     font-size: 2rem;
     margin-top: 0;
+    text-align: left;
 }
 
 #welcomeclose {
