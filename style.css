@@ -120,7 +120,9 @@ border-bottom: 0.5px solid #fea5be;
 
 .albumswindow {
   position: absolute;
-  top: 200px;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
   z-index: 30;
   cursor: pointer;
   background-color: #ffe0e6;
@@ -128,8 +130,8 @@ border-bottom: 0.5px solid #fea5be;
   border-radius: 10px;
   width:1000px;
   max-height: calc(100vh - 220px);
-overflow-y: auto;
-box-sizing: border-box;
+  overflow-y: auto;
+  box-sizing: border-box;
   padding: 10px;
   font-weight: 700;
   color: #002f4f;
@@ -371,7 +373,9 @@ box-sizing: border-box;
 
 #backgroundsAppwindow {
   position: absolute;
-  top: 200px;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
   z-index: 30;
   cursor: pointer;
   background-color: #ffe0e6;
@@ -452,7 +456,7 @@ box-sizing: border-box;
     top: 200px; left: 50%; 
     transform: translate(-50%);
     padding-bottom: 20px;
-    display:none;
+    display: none;
 }
 
 .quote {
