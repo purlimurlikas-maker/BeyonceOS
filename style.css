@@ -4,12 +4,13 @@ body {
   position: relative;
   color: #000;
   min-height: 100vh;
-box-sizing: border-box;
-background-image: url('https://i.pinimg.com/736x/44/d4/bd/44d4bd34749da9937492b31e27374e7f.jpg');
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
+  box-sizing: border-box;
+  background-image: url('https://i.pinimg.com/736x/44/d4/bd/44d4bd34749da9937492b31e27374e7f.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
