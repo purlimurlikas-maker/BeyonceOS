@@ -50,7 +50,11 @@ function dragElement(element) {
     initialX = e.clientX;
     initialY = e.clientY;
     // Step 11: Update the element's new position by modifying its `top` and `left` CSS properties.
-    element.style.top = (element.offsetTop - currentY) + "px";
+    const topBarBottom = document.getElementById("top").getBoundingClientRect().bottom;
+    const maxTop = Math.max(topBarBottom, window.innerHeight - element.offsetHeight);
+    const nextTop = element.offsetTop - currentY;
+
+    element.style.top = Math.min(Math.max(nextTop, topBarBottom), maxTop) + "px";
     element.style.left = (element.offsetLeft - currentX) + "px";
   }
 
@@ -234,7 +238,7 @@ if (albumswindowClose) {
   albumswindowClose.addEventListener('mousedown', (e) => e.stopPropagation());
   albumswindowClose.addEventListener('click', (e) => {
     e.stopPropagation();
-    closeWindow(document.getElementById('albumswindow'));
+    closeWindowById('albumswindow');
   });
 }
 
@@ -259,7 +263,7 @@ if (backgroundsAppwindowClose) {
   backgroundsAppwindowClose.addEventListener('pointerdown', (e) => e.stopPropagation());
   backgroundsAppwindowClose.addEventListener('click', (e) => {
     e.stopPropagation();
-    closeWindow(document.getElementById('backgroundsAppwindow'));
+   closeWindowById('backgroundsAppwindow');
   });
 }
 
@@ -317,4 +321,22 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('selected');
     });
   });
+});
+
+function closeWindowById(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = 'none';
+
+  if (id === 'albumswindow' && albums) {
+    albums.classList.remove('selected');
+  }
+
+  if (id === 'backgroundsAppwindow' && backgroundsApp) {
+    backgroundsApp.classList.remove('selected');
+  }
+}
+
+document.getElementById('removeSelected')?.addEventListener('click', () => {
+  if (selectedIcon) deselectIcon(selectedIcon);
 });
