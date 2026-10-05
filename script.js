@@ -7,6 +7,7 @@ dragElement(document.querySelector("#importance"))
 dragElement(document.querySelector("#childhood"))
 dragElement(document.querySelector("#speech"))
 dragElement(document.querySelector("#backgroundsAppwindow"))
+dragElement(document.querySelector("#quotes"))
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -211,6 +212,28 @@ speechScreenOpen.addEventListener("click", function() {
   openWindow(speechScreen);
 });
 
+var quotesScreen = document.querySelector("#quotes")
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
+
+function openWindow(element) {
+  element.style.display = "block"
+}
+
+var quotesScreenClose = document.querySelector("#quotesclose")
+
+var quotesScreenOpen = document.querySelector("#quotesopen")
+
+quotesScreenClose.addEventListener("click", function() {
+  closeWindow(quotesScreen);
+});
+
+quotesScreenOpen.addEventListener("click", function() {
+  openWindow(quotesScreen);
+});
+
 var selectedIcon = undefined
 
 function selectIcon(element) {
@@ -275,7 +298,8 @@ const regularWindows = [
   document.getElementById("accomplishments"),
   document.getElementById("importance"),
   document.getElementById("childhood"),
-  document.getElementById("speech")
+  document.getElementById("speech"),
+  document.getElementById("quotes")
 ];
 
 function bringWindowToFront(windowElement) {
