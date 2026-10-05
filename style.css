@@ -3,6 +3,13 @@ body {
   padding: 70px;
   position: relative;
   color: #000;
+  min-height: 100vh;
+box-sizing: border-box;
+background-image: url('https://i.pinimg.com/736x/44/d4/bd/44d4bd34749da9937492b31e27374e7f.jpg');
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,8 +22,9 @@ h1, h2, h3, h4, h5, h6 {
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
 }
 
@@ -63,7 +71,7 @@ border-bottom: 0.5px solid #fea5be;
 }
  
 
-#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader, #childhoodheader, #speechheader {
+#welcomeheader, #albumswindowheader, #aboutheader, #accomplishmentsheader, #importanceheader, #childhoodheader, #speechheader, #backgroundsheader {
     font-size: 2rem;
     margin-top: 0;
 }
@@ -112,13 +120,15 @@ border-bottom: 0.5px solid #fea5be;
 .albumswindow {
   position: absolute;
   top: 200px;
-  z-index: 6;
+  z-index: 30;
   cursor: pointer;
   background-color: #ffe0e6;
   border: 3px solid #fea5be;
   border-radius: 10px;
   width:1000px;
-  height: auto;
+  max-height: calc(100vh - 220px);
+overflow-y: auto;
+box-sizing: border-box;
   padding: 10px;
   font-weight: 700;
   color: #002f4f;
@@ -138,7 +148,7 @@ border-bottom: 0.5px solid #fea5be;
   }
 
   .albumcover {
-display: block;
+  display: block;
   width: 100%;
   border-radius: 12px;
    }
@@ -155,11 +165,11 @@ display: block;
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
-    display: none;
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
-    z-index: 4;
+    display: none;
 }
 
 #aboutclose {
@@ -200,11 +210,11 @@ display: block;
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
-    display:none;
-    z-index: 4;
+    display: none;
 }
 
 #accomplishmentsclose {
@@ -238,11 +248,11 @@ display: block;
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
-    display:none;
-    z-index: 4;
+    display: none;
 }
 
 #importanceclose {
@@ -268,7 +278,7 @@ display: block;
   right: 10px;
   display: flex;
   flex-direction: column;
-  z-index: 5;
+  z-index: 20;
   }
 
 
@@ -278,11 +288,11 @@ display: block;
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
     display: none;
-    z-index: 4;
 }
 
   .pic5 { 
@@ -326,11 +336,11 @@ display: block;
     border: 3px solid #fea5be;
     padding: 10px;
     background-color: #ffe0e6;
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
+    position: absolute; 
+    top: 200px; left: 50%; 
+    transform: translate(-50%);
     padding-bottom: 20px;
-    display:none;
-    z-index: 4;
+    display: none;
 }
 
 #speechclose {
@@ -344,3 +354,83 @@ display: block;
   width: 20px;
   height: 20px;
   }
+
+.backgrounds-app-icon {
+  cursor: pointer;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+    }
+
+#backgroundsAppwindow {
+  position: absolute;
+  top: 200px;
+  z-index: 30;
+  cursor: pointer;
+  background-color: #ffe0e6;
+  border: 3px solid #fea5be;
+  border-radius: 10px;
+  width:1000px;
+  max-height: calc(100vh - 220px);
+overflow-y: auto;
+box-sizing: border-box;
+  padding: 10px;
+  font-weight: 700;
+  color: #002f4f;
+  display: none;
+  }
+
+.app-name2 {
+  position: absolute;
+  top: 70px;
+  left: 90px;
+  font-size: 1rem;
+}
+
+#backgroundsAppwindowclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 4;
+  cursor: pointer;
+  background-color: #ce491c;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  }
+
+.settings-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 680px;
+  margin: 12px auto;
+  color: #002f4f;
+}
+.settings-controls label { display: flex; flex-direction: column; font-weight: 700; }
+.settings-buttons button, .settings-controls button {
+  padding: 3px ; border-radius: 8px; border: none; background:#fea5be; color:#002f4f; cursor: pointer;
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 8px 0 16px 0;
+}
+.wallpaper-thumb {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+}
+.wallpaper-thumb img { display:block; width:100%; height:auto; object-fit:cover; }
+.wallpaper-thumb.selected { border-color: #40b4fb; box-shadow: 0 0 0 4px rgba(122,195,143,0.12); }

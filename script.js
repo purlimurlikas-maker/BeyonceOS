@@ -6,6 +6,7 @@ dragElement(document.querySelector("#albumswindow"))
 dragElement(document.querySelector("#importance"))
 dragElement(document.querySelector("#childhood"))
 dragElement(document.querySelector("#speech"))
+dragElement(document.querySelector("#backgroundsAppwindow"))
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
@@ -236,3 +237,84 @@ if (albumswindowClose) {
     closeWindow(document.getElementById('albumswindow'));
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const appWin = document.getElementById('backgrounds-app-icon');
+  if (appWin) appWin.style.display = 'none';
+});
+
+const backgroundsApp = document.getElementById('backgroundsApp');
+const backgroundsAppwindowClose = document.getElementById('backgroundsAppwindowclose');
+
+if (backgroundsApp) {
+  backgroundsApp.addEventListener('click', () => {
+    backgroundsApp.classList.add('selected');
+    openWindow(document.getElementById('backgroundsAppwindow'));
+  });
+}
+
+if (backgroundsAppwindowClose) {
+  backgroundsAppwindowClose.addEventListener('mousedown', (e) => e.stopPropagation());
+  backgroundsAppwindowClose.addEventListener('pointerdown', (e) => e.stopPropagation());
+  backgroundsAppwindowClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeWindow(document.getElementById('backgroundsAppwindow'));
+  });
+}
+
+
+
+const regularWindows = [
+  document.getElementById("welcome"),
+  document.getElementById("about"),
+  document.getElementById("accomplishments"),
+  document.getElementById("importance"),
+  document.getElementById("childhood"),
+  document.getElementById("speech")
+];
+
+function bringWindowToFront(windowElement) {
+  const index = regularWindows.indexOf(windowElement);
+  regularWindows.splice(index, 1);
+  regularWindows.push(windowElement);
+
+  regularWindows.forEach((item, order) => {
+    item.style.zIndex = 10 + order;
+  });
+}
+
+regularWindows.forEach((windowElement, order) => {
+  windowElement.style.zIndex = 10 + order;
+  windowElement.addEventListener("mousedown", () => {
+    bringWindowToFront(windowElement);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const wallpaperThumbs = Array.from(document.querySelectorAll('.wallpaper-thumb'));
+  const saved = localStorage.getItem('beyonceos.wallpaper');
+  const body = document.body;
+
+  if (saved) {
+    body.style.backgroundImage = `url('${saved}')`;
+    body.style.backgroundSize = 'cover';
+    wallpaperThumbs.forEach(btn => {
+      if (btn.dataset && btn.dataset.url === saved) btn.classList.add('selected');
+      else btn.classList.remove('selected');
+    });
+  }
+
+  wallpaperThumbs.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = btn.dataset && btn.dataset.url;
+      if (!url) return;
+      body.style.backgroundImage = `url('${url}')`;
+      body.style.backgroundSize = 'cover';
+      localStorage.setItem('beyonceos.wallpaper', url);
+      wallpaperThumbs.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    });
+  });
+});
